@@ -7,5 +7,5 @@ RUN apt-get update \
 RUN cd mooc-dl \
     && pip install -r requirements.txt
 WORKDIR /mooc-dl
-ENTRYPOINT [ "cd /mooc-dl && python /mooc-dl/mooc-dl.py" ]
-CMD [ "https://www.icourse163.org/course/ZJU-93001?tid=1003997005" ]
+# ENTRYPOINT [ "cd /mooc-dl && python /mooc-dl/mooc-dl.py" ]
+CMD [ "cd /mooc-dl && python mooc-dl.py https://www.icourse163.org/course/ZJU-93001?tid=1003997005" ]
