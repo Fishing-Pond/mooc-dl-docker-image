@@ -1,6 +1,6 @@
 FROM python:3
 RUN apt-get update \
-    && apt-get install git ffmpeg sed -y \
+    && apt-get install git ffmpeg sed nano -y \
     && git clone https://github.com/SigureMo/mooc-dl.git /mooc-dl \
     && sed -i 's/\"\"/"\/download\/\"/g' mooc-dl/config.json \
     && sed -i 's/false/true/g' mooc-dl/config.json
